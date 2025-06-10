@@ -75,6 +75,32 @@
             font-weight: 600;
             border-radius: 9999px;
         }
+        /* Sub-abas para as marcas de tênis */
+        .sub-tab-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2.5rem; /* 40px */
+            flex-wrap: wrap;
+        }
+        .sub-tab {
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            background-color: #4b5563;
+            color: #d1d5db;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .sub-tab:hover {
+            background-color: #6b7280;
+            color: #ffffff;
+        }
+        .sub-tab.active {
+            background-color: #ffffff;
+            color: #064e3b;
+            font-weight: 700;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -117,46 +143,17 @@
             <div class="container mx-auto px-4 text-center">
                 <h3 class="text-3xl font-bold text-white mb-12">Explore Nossas Categorias</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Card Tênis -->
-                    <a href="#tenis" class="category-card group block bg-gray-800 rounded-lg overflow-hidden">
-                        <div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600269452121-4f2416e55c28?q=80&w=1965&auto=format&fit=crop')"></div>
-                        <div class="p-6">
-                            <h4 class="text-2xl font-bold text-white">Tênis</h4>
-                            <span class="mt-2 inline-block text-green-300 group-hover:underline">Ver agora &rarr;</span>
-                        </div>
-                    </a>
-                    <!-- Card Roupas -->
-                    <a href="#roupas" class="category-card group block bg-gray-800 rounded-lg overflow-hidden">
-                        <div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1591047139829-d916b67ea7c5?q=80&w=1974&auto=format&fit=crop')"></div>
-                        <div class="p-6">
-                            <h4 class="text-2xl font-bold text-white">Roupas</h4>
-                            <span class="mt-2 inline-block text-green-300 group-hover:underline">Ver agora &rarr;</span>
-                        </div>
-                    </a>
-                     <!-- Card Acessórios -->
-                    <a href="#acessorios" class="category-card group block bg-gray-800 rounded-lg overflow-hidden">
-                        <div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1620625515032-6ed2c141d044?q=80&w=1974&auto=format&fit=crop')"></div>
-                        <div class="p-6">
-                            <h4 class="text-2xl font-bold text-white">Acessórios</h4>
-                             <span class="mt-2 inline-block text-green-300 group-hover:underline">Ver agora &rarr;</span>
-                        </div>
-                    </a>
-                     <!-- Card Academia -->
-                    <a href="#academia" class="category-card group block bg-gray-800 rounded-lg overflow-hidden">
-                        <div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1975&auto=format&fit=crop')"></div>
-                        <div class="p-6">
-                            <h4 class="text-2xl font-bold text-white">Academia</h4>
-                            <span class="mt-2 inline-block text-green-300 group-hover:underline">Ver agora &rarr;</span>
-                        </div>
-                    </a>
+                    <a href="#tenis" class="category-card group block bg-gray-800 rounded-lg overflow-hidden"><div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600269452121-4f2416e55c28?q=80&w=1965&auto=format&fit=crop')"></div><div class="p-6"><h4 class="text-2xl font-bold text-white">Tênis</h4><span class="mt-2 inline-block text-green-300 group-hover:underline">Ver agora &rarr;</span></div></a>
+                    <a href="#roupas" class="category-card group block bg-gray-800 rounded-lg overflow-hidden"><div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1591047139829-d916b67ea7c5?q=80&w=1974&auto=format&fit=crop')"></div><div class="p-6"><h4 class="text-2xl font-bold text-white">Roupas</h4><span class="mt-2 inline-block text-green-300 group-hover:underline">Ver agora &rarr;</span></div></a>
+                    <a href="#acessorios" class="category-card group block bg-gray-800 rounded-lg overflow-hidden"><div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1620625515032-6ed2c141d044?q=80&w=1974&auto=format&fit=crop')"></div><div class="p-6"><h4 class="text-2xl font-bold text-white">Acessórios</h4><span class="mt-2 inline-block text-green-300 group-hover:underline">Ver agora &rarr;</span></div></a>
+                    <a href="#academia" class="category-card group block bg-gray-800 rounded-lg overflow-hidden"><div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1975&auto=format&fit=crop')"></div><div class="p-6"><h4 class="text-2xl font-bold text-white">Academia</h4><span class="mt-2 inline-block text-green-300 group-hover:underline">Ver agora &rarr;</span></div></a>
                 </div>
             </div>
         </section>
     </div>
 
-    <!-- CATÁLOGO DE PRODUTOS (SEÇÃO OCULTA) -->
+    <!-- CATÁLOGO DE PRODUTOS -->
     <main id="catalog-section" class="container mx-auto p-4 sm:p-6 lg:p-8 hidden">
-        <!-- NAVEGAÇÃO POR ABAS PRINCIPAIS -->
         <div class="mb-12">
             <nav class="flex justify-center border-b border-green-800/50 -mb-px space-x-6 md:space-x-8" id="main-tabs">
                 <a href="#tenis" data-tab="tenis" class="tab py-4 px-1 border-b-2 font-medium text-lg">Tênis</a>
@@ -166,138 +163,77 @@
             </nav>
         </div>
 
-        <!-- CONTEÚDO DAS ABAS -->
         <div id="tab-content-area">
             <div id="tenis" class="main-tab-content">
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                    <!-- PRODUTO NOVO: Air Jordan 1 Low OG "Voodoo" -->
-                    <div class="product-card rounded-xl overflow-hidden flex flex-col">
-                        <img src="https://droper-media.us-southeast-1.linodeobjects.com/271202319010387.webp" alt="Tênis Air Jordan 1 Low OG Voodoo" class="w-full h-72 object-cover product-image">
-                        <div class="p-5 flex flex-col flex-grow">
-                            <p class="text-sm font-medium text-green-300">Nike</p>
-                            <h3 class="text-xl font-bold text-white mt-1 product-name">Air Jordan 1 Low OG "Voodoo"</h3>
-                            <div class="mt-3">
-                                <p class="text-xs text-gray-400 mb-2">Cores:</p>
-                                <div class="flex space-x-2 color-selector">
-                                    <div class="color-swatch active" style="background-color: #78716c;" data-image="https://placehold.co/600x600/374151/FFF?text=Air+Jordan+1+Voodoo" data-color="Voodoo"></div>
-                                </div>
-                            </div>
-                            <div class="my-4">
-                                <span class="discount-badge">+1 peça = 10% OFF</span>
-                            </div>
-                             <div class="mt-auto pt-4">
-                                <p class="text-sm text-gray-300">ou 3x de R$ 210,00</p>
-                                <p class="text-2xl font-extrabold text-white">R$ 560,00 no PIX</p>
-                            </div>
-                            <a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20no%20Air%20Jordan%201%20Low%20OG%20Voodoo" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a>
-                        </div>
-                    </div>
-                    <!-- PRODUTO: YEEZY 500 -->
-                    <div class="product-card rounded-xl overflow-hidden flex flex-col">
-                        <img src="https://droper-media.us-southeast-1.linodeobjects.com/1422022134336404.webp" alt="Tênis Yeezy 500" class="w-full h-72 object-cover product-image">
-                        <div class="p-5 flex flex-col flex-grow">
-                            <p class="text-sm font-medium text-green-300">Adidas</p>
-                            <h3 class="text-xl font-bold text-white mt-1 product-name">Yeezy 500</h3>
-                            <div class="mt-3">
-                                <p class="text-xs text-gray-400 mb-2">Cores:</p>
-                                <div class="flex space-x-2 color-selector">
-                                    <div class="color-swatch active" style="background-color: #A5A58D;" data-image="https://placehold.co/600x600/374151/FFF?text=Yeezy+500" data-color="Taupe Light"></div>
-                                </div>
-                            </div>
-                            <div class="my-4">
-                                <span class="discount-badge">+1 peça = 10% OFF</span>
-                            </div>
-                             <div class="mt-auto pt-4">
-                                <p class="text-sm text-gray-300">ou 3x de R$ 213,97</p>
-                                <p class="text-2xl font-extrabold text-white">R$ 596,91 no PIX</p>
-                            </div>
-                            <a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20no%20Yeezy%20500,%20Cor:%20Taupe%20Light" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a>
-                        </div>
-                    </div>
-                    <!-- PRODUTO: AIR FORCE 1 '07 -->
-                    <div class="product-card rounded-xl overflow-hidden flex flex-col">
-                        <img src="https://static.dafiti.com.br/p/Nike-T%C3%AAnis-Nike-Air-Force-1-'07-Masculino-6417-32652411-1-zoom.jpg" alt="Tênis Air Force 1 '07" class="w-full h-72 object-cover product-image">
-                        <div class="p-5 flex flex-col flex-grow">
-                            <p class="text-sm font-medium text-green-300">Nike</p>
-                            <h3 class="text-xl font-bold text-white mt-1 product-name">Air Force 1 '07</h3>
-                            <div class="mt-3">
-                                <p class="text-xs text-gray-400 mb-2">Cores:</p>
-                                <div class="flex space-x-2 color-selector">
-                                    <div class="color-swatch active" style="background-color: #FFFFFF;" data-image="https://placehold.co/600x600/374151/FFF?text=Air+Force+1" data-color="Branco"></div>
-                                </div>
-                            </div>
-                            <div class="my-4">
-                                <span class="discount-badge">+1 peça = 10% OFF</span>
-                            </div>
-                            <div class="mt-auto pt-4">
-                                <p class="text-sm text-gray-300">ou 3x de R$ 144,83</p>
-                                <p class="text-2xl font-extrabold text-white">R$ 404,05 no PIX</p>
-                            </div>
-                            <a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20no%20Air%20Force%201%20'07,%20Cor:%20Branco" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a>
-                        </div>
-                    </div>
+                <!-- NAVEGAÇÃO SECUNDÁRIA (MARCAS) -->
+                <div class="sub-tab-nav">
+                    <button data-brand="nike" class="sub-tab active">Nike</button>
+                    <button data-brand="adidas" class="sub-tab">Adidas</button>
+                    <button data-brand="new-balance" class="sub-tab">New Balance</button>
+                    <button data-brand="vans" class="sub-tab">Vans</button>
+                    <button data-brand="bape" class="sub-tab">Bape</button>
+                </div>
+
+                <!-- CONTEÚDO DAS MARCAS -->
+                <div id="nike-content" class="brand-content grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    <!-- Nike Products -->
+                    <div class="product-card rounded-xl overflow-hidden flex flex-col"><img src="https://placehold.co/600x600/374151/FFF?text=Nike+Dunk+Low" class="w-full h-72 object-cover product-image"><div class="p-5 flex flex-col flex-grow"><p class="text-sm font-medium text-green-300">Nike</p><h3 class="text-xl font-bold text-white mt-1 product-name">Dunk Low</h3><div class="my-4"><span class="discount-badge">+1 peça = 10% OFF</span></div><p class="text-2xl font-extrabold text-white mt-auto pt-4">R$ 699,90</p><a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20no%20Nike%20Dunk%20Low" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a></div></div>
+                    <div class="product-card rounded-xl overflow-hidden flex flex-col"><img src="https://placehold.co/600x600/374151/FFF?text=Nike+Air+Force+1+%2707" class="w-full h-72 object-cover product-image"><div class="p-5 flex flex-col flex-grow"><p class="text-sm font-medium text-green-300">Nike</p><h3 class="text-xl font-bold text-white mt-1 product-name">Air Force 1 '07</h3><div class="my-4"><span class="discount-badge">+1 peça = 10% OFF</span></div><div class="mt-auto pt-4"><p class="text-sm text-gray-300">ou 3x de R$ 144,83</p><p class="text-2xl font-extrabold text-white">R$ 404,05 no PIX</p></div><a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20no%20Nike%20Air%20Force%201%20'07" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a></div></div>
+                    <div class="product-card rounded-xl overflow-hidden flex flex-col"><img src="https://placehold.co/600x600/374151/FFF?text=Nike+Air+Jordan+1" class="w-full h-72 object-cover product-image"><div class="p-5 flex flex-col flex-grow"><p class="text-sm font-medium text-green-300">Nike</p><h3 class="text-xl font-bold text-white mt-1 product-name">Air Jordan 1</h3><div class="my-4"><span class="discount-badge">+1 peça = 10% OFF</span></div><p class="text-2xl font-extrabold text-white mt-auto pt-4">R$ 1.199,90</p><a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20no%20Nike%20Air%20Jordan%201" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a></div></div>
+                    <div class="product-card rounded-xl overflow-hidden flex flex-col"><img src="https://placehold.co/600x600/374151/FFF?text=Nike+Air+Max+90" class="w-full h-72 object-cover product-image"><div class="p-5 flex flex-col flex-grow"><p class="text-sm font-medium text-green-300">Nike</p><h3 class="text-xl font-bold text-white mt-1 product-name">Air Max 90</h3><div class="my-4"><span class="discount-badge">+1 peça = 10% OFF</span></div><p class="text-2xl font-extrabold text-white mt-auto pt-4">R$ 799,90</p><a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20no%20Nike%20Air%20Max%2090" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a></div></div>
+                    <div class="product-card rounded-xl overflow-hidden flex flex-col"><img src="https://placehold.co/600x600/374151/FFF?text=Nike+Vomero+5" class="w-full h-72 object-cover product-image"><div class="p-5 flex flex-col flex-grow"><p class="text-sm font-medium text-green-300">Nike</p><h3 class="text-xl font-bold text-white mt-1 product-name">Zoom Vomero 5</h3><div class="my-4"><span class="discount-badge">+1 peça = 10% OFF</span></div><p class="text-2xl font-extrabold text-white mt-auto pt-4">R$ 999,90</p><a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20no%20Nike%20Zoom%20Vomero%205" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a></div></div>
+                </div>
+
+                <div id="adidas-content" class="brand-content grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 hidden">
+                    <!-- Adidas Products -->
+                    <div class="product-card rounded-xl overflow-hidden flex flex-col"><img src="https://placehold.co/600x600/374151/FFF?text=Adidas+Samba" class="w-full h-72 object-cover product-image"><div class="p-5 flex flex-col flex-grow"><p class="text-sm font-medium text-green-300">Adidas</p><h3 class="text-xl font-bold text-white mt-1 product-name">Samba OG</h3><div class="my-4"><span class="discount-badge">+1 peça = 10% OFF</span></div><p class="text-2xl font-extrabold text-white mt-auto pt-4">R$ 699,90</p><a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20no%20Adidas%20Samba%20OG" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a></div></div>
+                    <div class="product-card rounded-xl overflow-hidden flex flex-col"><img src="https://placehold.co/600x600/374151/FFF?text=Adidas+Gazelle" class="w-full h-72 object-cover product-image"><div class="p-5 flex flex-col flex-grow"><p class="text-sm font-medium text-green-300">Adidas</p><h3 class="text-xl font-bold text-white mt-1 product-name">Gazelle</h3><div class="my-4"><span class="discount-badge">+1 peça = 10% OFF</span></div><p class="text-2xl font-extrabold text-white mt-auto pt-4">R$ 649,90</p><a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20no%20Adidas%20Gazelle" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a></div></div>
+                    <div class="product-card rounded-xl overflow-hidden flex flex-col"><img src="https://placehold.co/600x600/374151/FFF?text=Adidas+Campus+00s" class="w-full h-72 object-cover product-image"><div class="p-5 flex flex-col flex-grow"><p class="text-sm font-medium text-green-300">Adidas</p><h3 class="text-xl font-bold text-white mt-1 product-name">Campus 00s</h3><div class="my-4"><span class="discount-badge">+1 peça = 10% OFF</span></div><p class="text-2xl font-extrabold text-white mt-auto pt-4">R$ 799,90</p><a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20no%20Adidas%20Campus%2000s" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a></div></div>
+                    <div class="product-card rounded-xl overflow-hidden flex flex-col"><img src="https://placehold.co/600x600/374151/FFF?text=Adidas+Spezial" class="w-full h-72 object-cover product-image"><div class="p-5 flex flex-col flex-grow"><p class="text-sm font-medium text-green-300">Adidas</p><h3 class="text-xl font-bold text-white mt-1 product-name">Spezial</h3><div class="my-4"><span class="discount-badge">+1 peça = 10% OFF</span></div><p class="text-2xl font-extrabold text-white mt-auto pt-4">R$ 749,90</p><a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20no%20Adidas%20Spezial" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a></div></div>
+                    <div class="product-card rounded-xl overflow-hidden flex flex-col"><img src="https://placehold.co/600x600/374151/FFF?text=Adidas+Superstar" class="w-full h-72 object-cover product-image"><div class="p-5 flex flex-col flex-grow"><p class="text-sm font-medium text-green-300">Adidas</p><h3 class="text-xl font-bold text-white mt-1 product-name">Superstar</h3><div class="my-4"><span class="discount-badge">+1 peça = 10% OFF</span></div><p class="text-2xl font-extrabold text-white mt-auto pt-4">R$ 599,90</p><a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20no%20Adidas%20Superstar" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a></div></div>
+                </div>
+
+                <div id="new-balance-content" class="brand-content grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 hidden">
+                    <!-- New Balance Products -->
+                    <div class="product-card rounded-xl overflow-hidden flex flex-col"><img src="https://placehold.co/600x600/374151/FFF?text=New+Balance+550" class="w-full h-72 object-cover product-image"><div class="p-5 flex flex-col flex-grow"><p class="text-sm font-medium text-green-300">New Balance</p><h3 class="text-xl font-bold text-white mt-1 product-name">550</h3><div class="my-4"><span class="discount-badge">+1 peça = 10% OFF</span></div><p class="text-2xl font-extrabold text-white mt-auto pt-4">R$ 849,90</p><a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20no%20New%20Balance%20550" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a></div></div>
+                    <div class="product-card rounded-xl overflow-hidden flex flex-col"><img src="https://placehold.co/600x600/374151/FFF?text=New+Balance+530" class="w-full h-72 object-cover product-image"><div class="p-5 flex flex-col flex-grow"><p class="text-sm font-medium text-green-300">New Balance</p><h3 class="text-xl font-bold text-white mt-1 product-name">530</h3><div class="my-4"><span class="discount-badge">+1 peça = 10% OFF</span></div><p class="text-2xl font-extrabold text-white mt-auto pt-4">R$ 749,90</p><a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20no%20New%20Balance%20530" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a></div></div>
+                    <div class="product-card rounded-xl overflow-hidden flex flex-col"><img src="https://placehold.co/600x600/374151/FFF?text=New+Balance+2002R" class="w-full h-72 object-cover product-image"><div class="p-5 flex flex-col flex-grow"><p class="text-sm font-medium text-green-300">New Balance</p><h3 class="text-xl font-bold text-white mt-1 product-name">2002R</h3><div class="my-4"><span class="discount-badge">+1 peça = 10% OFF</span></div><p class="text-2xl font-extrabold text-white mt-auto pt-4">R$ 1.099,90</p><a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20no%20New%20Balance%202002R" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a></div></div>
+                    <div class="product-card rounded-xl overflow-hidden flex flex-col"><img src="https://placehold.co/600x600/374151/FFF?text=New+Balance+1906" class="w-full h-72 object-cover product-image"><div class="p-5 flex flex-col flex-grow"><p class="text-sm font-medium text-green-300">New Balance</p><h3 class="text-xl font-bold text-white mt-1 product-name">1906D</h3><div class="my-4"><span class="discount-badge">+1 peça = 10% OFF</span></div><p class="text-2xl font-extrabold text-white mt-auto pt-4">R$ 1.199,90</p><a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20no%20New%20Balance%201906D" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a></div></div>
+                    <div class="product-card rounded-xl overflow-hidden flex flex-col"><img src="https://placehold.co/600x600/374151/FFF?text=New+Balance+990" class="w-full h-72 object-cover product-image"><div class="p-5 flex flex-col flex-grow"><p class="text-sm font-medium text-green-300">New Balance</p><h3 class="text-xl font-bold text-white mt-1 product-name">990v6</h3><div class="my-4"><span class="discount-badge">+1 peça = 10% OFF</span></div><p class="text-2xl font-extrabold text-white mt-auto pt-4">R$ 1.499,90</p><a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20no%20New%20Balance%20990v6" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a></div></div>
+                </div>
+
+                <div id="vans-content" class="brand-content grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 hidden">
+                    <!-- Vans Products -->
+                    <div class="product-card rounded-xl overflow-hidden flex flex-col"><img src="https://placehold.co/600x600/374151/FFF?text=Vans+Knu+Skool" class="w-full h-72 object-cover product-image"><div class="p-5 flex flex-col flex-grow"><p class="text-sm font-medium text-green-300">Vans</p><h3 class="text-xl font-bold text-white mt-1 product-name">Knu Skool</h3><div class="my-4"><span class="discount-badge">+1 peça = 10% OFF</span></div><p class="text-2xl font-extrabold text-white mt-auto pt-4">R$ 599,90</p><a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20no%20Vans%20Knu%20Skool" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a></div></div>
+                    <div class="product-card rounded-xl overflow-hidden flex flex-col"><img src="https://placehold.co/600x600/374151/FFF?text=Vans+Old+Skool" class="w-full h-72 object-cover product-image"><div class="p-5 flex flex-col flex-grow"><p class="text-sm font-medium text-green-300">Vans</p><h3 class="text-xl font-bold text-white mt-1 product-name">Old Skool</h3><div class="my-4"><span class="discount-badge">+1 peça = 10% OFF</span></div><p class="text-2xl font-extrabold text-white mt-auto pt-4">R$ 449,90</p><a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20no%20Vans%20Old%20Skool" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a></div></div>
+                    <div class="product-card rounded-xl overflow-hidden flex flex-col"><img src="https://placehold.co/600x600/374151/FFF?text=Vans+Authentic" class="w-full h-72 object-cover product-image"><div class="p-5 flex flex-col flex-grow"><p class="text-sm font-medium text-green-300">Vans</p><h3 class="text-xl font-bold text-white mt-1 product-name">Authentic</h3><div class="my-4"><span class="discount-badge">+1 peça = 10% OFF</span></div><p class="text-2xl font-extrabold text-white mt-auto pt-4">R$ 399,90</p><a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20no%20Vans%20Authentic" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a></div></div>
+                    <div class="product-card rounded-xl overflow-hidden flex flex-col"><img src="https://placehold.co/600x600/374151/FFF?text=Vans+Slip-On" class="w-full h-72 object-cover product-image"><div class="p-5 flex flex-col flex-grow"><p class="text-sm font-medium text-green-300">Vans</p><h3 class="text-xl font-bold text-white mt-1 product-name">Classic Slip-On</h3><div class="my-4"><span class="discount-badge">+1 peça = 10% OFF</span></div><p class="text-2xl font-extrabold text-white mt-auto pt-4">R$ 429,90</p><a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20no%20Vans%20Classic%20Slip-On" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a></div></div>
+                    <div class="product-card rounded-xl overflow-hidden flex flex-col"><img src="https://placehold.co/600x600/374151/FFF?text=Vans+Sk8-Hi" class="w-full h-72 object-cover product-image"><div class="p-5 flex flex-col flex-grow"><p class="text-sm font-medium text-green-300">Vans</p><h3 class="text-xl font-bold text-white mt-1 product-name">Sk8-Hi</h3><div class="my-4"><span class="discount-badge">+1 peça = 10% OFF</span></div><p class="text-2xl font-extrabold text-white mt-auto pt-4">R$ 499,90</p><a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20no%20Vans%20Sk8-Hi" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a></div></div>
+                </div>
+
+                <div id="bape-content" class="brand-content grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 hidden">
+                   <!-- Bape Products -->
+                    <div class="product-card rounded-xl overflow-hidden flex flex-col"><img src="https://placehold.co/600x600/374151/FFF?text=Bape+Bape+Sta" class="w-full h-72 object-cover product-image"><div class="p-5 flex flex-col flex-grow"><p class="text-sm font-medium text-green-300">Bape</p><h3 class="text-xl font-bold text-white mt-1 product-name">Bape Sta</h3><div class="my-4"><span class="discount-badge">+1 peça = 10% OFF</span></div><p class="text-2xl font-extrabold text-white mt-auto pt-4">R$ 1.899,90</p><a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20no%20Bape%20Bape%20Sta" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a></div></div>
+                    <div class="product-card rounded-xl overflow-hidden flex flex-col"><img src="https://placehold.co/600x600/374151/FFF?text=Bape+Sk8+Sta" class="w-full h-72 object-cover product-image"><div class="p-5 flex flex-col flex-grow"><p class="text-sm font-medium text-green-300">Bape</p><h3 class="text-xl font-bold text-white mt-1 product-name">Sk8 Sta</h3><div class="my-4"><span class="discount-badge">+1 peça = 10% OFF</span></div><p class="text-2xl font-extrabold text-white mt-auto pt-4">R$ 1.799,90</p><a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20no%20Bape%20Sk8%20Sta" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a></div></div>
+                    <div class="product-card rounded-xl overflow-hidden flex flex-col"><img src="https://placehold.co/600x600/374151/FFF?text=Bape+Court+Sta" class="w-full h-72 object-cover product-image"><div class="p-5 flex flex-col flex-grow"><p class="text-sm font-medium text-green-300">Bape</p><h3 class="text-xl font-bold text-white mt-1 product-name">Court Sta</h3><div class="my-4"><span class="discount-badge">+1 peça = 10% OFF</span></div><p class="text-2xl font-extrabold text-white mt-auto pt-4">R$ 1.749,90</p><a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20no%20Bape%20Court%20Sta" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a></div></div>
+                    <div class="product-card rounded-xl overflow-hidden flex flex-col"><img src="https://placehold.co/600x600/374151/FFF?text=Bape+Road+Sta" class="w-full h-72 object-cover product-image"><div class="p-5 flex flex-col flex-grow"><p class="text-sm font-medium text-green-300">Bape</p><h3 class="text-xl font-bold text-white mt-1 product-name">Road Sta</h3><div class="my-4"><span class="discount-badge">+1 peça = 10% OFF</span></div><p class="text-2xl font-extrabold text-white mt-auto pt-4">R$ 1.699,90</p><a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20no%20Bape%20Road%20Sta" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a></div></div>
+                    <div class="product-card rounded-xl overflow-hidden flex flex-col"><img src="https://placehold.co/600x600/374151/FFF?text=Bape+Bape+Sta+93+Hi" class="w-full h-72 object-cover product-image"><div class="p-5 flex flex-col flex-grow"><p class="text-sm font-medium text-green-300">Bape</p><h3 class="text-xl font-bold text-white mt-1 product-name">Bape Sta 93 Hi</h3><div class="my-4"><span class="discount-badge">+1 peça = 10% OFF</span></div><p class="text-2xl font-extrabold text-white mt-auto pt-4">R$ 1.999,90</p><a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20no%20Bape%20Bape%20Sta%2093%20Hi" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a></div></div>
                 </div>
             </div>
+            
             <div id="roupas" class="main-tab-content hidden">
                  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                    <div class="product-card rounded-xl overflow-hidden flex flex-col">
-                        <img src="https://placehold.co/600x600/374151/FFF?text=Camiseta+Essentials+Preta" alt="Camiseta Essentials" class="w-full h-72 object-cover product-image">
-                        <div class="p-5 flex flex-col flex-grow">
-                            <p class="text-sm font-medium text-green-300">Fear of God</p>
-                            <h3 class="text-xl font-bold text-white mt-1 product-name">Camiseta Essentials</h3>
-                            <div class="mt-3">
-                                <p class="text-xs text-gray-400 mb-2">Cores:</p>
-                                <div class="flex space-x-2 color-selector">
-                                    <div class="color-swatch active" style="background-color: #000000;" data-image="https://placehold.co/600x600/374151/FFF?text=Camiseta+Essentials+Preta" data-color="Preta"></div>
-                                    <div class="color-swatch" style="background-color: #F3F4F6;" data-image="https://placehold.co/600x600/374151/FFF?text=Camiseta+Essentials+Off-White" data-color="Off-White"></div>
-                                </div>
-                            </div>
-                            <div class="my-4">
-                                <span class="discount-badge">+1 peça = 20% OFF</span>
-                            </div>
-                            <p class="text-2xl font-extrabold text-white mt-auto pt-4">R$ 399,90</p>
-                            <a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20na%20Camiseta%20Essentials,%20Cor:%20Preta" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a>
-                        </div>
-                    </div>
+                    <div class="product-card rounded-xl overflow-hidden flex flex-col"><img src="https://placehold.co/600x600/374151/FFF?text=Camiseta+Essentials+Preta" class="w-full h-72 object-cover product-image"><div class="p-5 flex flex-col flex-grow"><p class="text-sm font-medium text-green-300">Fear of God</p><h3 class="text-xl font-bold text-white mt-1 product-name">Camiseta Essentials</h3><div class="mt-3"><p class="text-xs text-gray-400 mb-2">Cores:</p><div class="flex space-x-2 color-selector"><div class="color-swatch active" style="background-color: #000000;" data-image="https://placehold.co/600x600/374151/FFF?text=Camiseta+Essentials+Preta" data-color="Preta"></div><div class="color-swatch" style="background-color: #F3F4F6;" data-image="https://placehold.co/600x600/374151/FFF?text=Camiseta+Essentials+Off-White" data-color="Off-White"></div></div></div><div class="my-4"><span class="discount-badge">+1 peça = 20% OFF</span></div><p class="text-2xl font-extrabold text-white mt-auto pt-4">R$ 399,90</p><a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20na%20Camiseta%20Essentials,%20Cor:%20Preta" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a></div></div>
                 </div>
             </div>
             <div id="acessorios" class="main-tab-content hidden">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                    <div class="product-card rounded-xl overflow-hidden flex flex-col">
-                        <img src="https://placehold.co/600x600/374151/FFF?text=Cordão+Prata+925" alt="Cordão Prata 925" class="w-full h-72 object-cover product-image">
-                        <div class="p-5 flex flex-col flex-grow">
-                            <p class="text-sm font-medium text-green-300">The Vértice Jewels</p>
-                            <h3 class="text-xl font-bold text-white mt-1 product-name">Cordão Grumet 3mm</h3>
-                            <div class="my-4">
-                                <span class="discount-badge">+1 peça = 30% OFF</span>
-                            </div>
-                            <p class="text-2xl font-extrabold text-white mt-auto pt-4">R$ 199,90</p>
-                            <a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20no%20Cordão%20Grumet%203mm" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a>
-                        </div>
-                    </div>
+                    <div class="product-card rounded-xl overflow-hidden flex flex-col"><img src="https://placehold.co/600x600/374151/FFF?text=Cordão+Prata+925" class="w-full h-72 object-cover product-image"><div class="p-5 flex flex-col flex-grow"><p class="text-sm font-medium text-green-300">The Vértice Jewels</p><h3 class="text-xl font-bold text-white mt-1 product-name">Cordão Grumet 3mm</h3><div class="my-4"><span class="discount-badge">+1 peça = 30% OFF</span></div><p class="text-2xl font-extrabold text-white mt-auto pt-4">R$ 199,90</p><a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20no%20Cordão%20Grumet%203mm" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a></div></div>
                 </div>
             </div>
             <div id="academia" class="main-tab-content hidden">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                    <div class="product-card rounded-xl overflow-hidden flex flex-col">
-                        <img src="https://placehold.co/600x600/374151/FFF?text=Legging+Performance+Preta" alt="Legging Performance" class="w-full h-72 object-cover product-image">
-                        <div class="p-5 flex flex-col flex-grow">
-                            <p class="text-sm font-medium text-green-300">Vértice Performance</p>
-                            <h3 class="text-xl font-bold text-white mt-1 product-name">Legging Performance Fit</h3>
-                            <div class="mt-3">
-                                <p class="text-xs text-gray-400 mb-2">Cores:</p>
-                                <div class="flex space-x-2 color-selector">
-                                    <div class="color-swatch active" style="background-color: #000000;" data-image="https://placehold.co/600x600/374151/FFF?text=Legging+Performance+Preta" data-color="Preta"></div>
-                                    <div class="color-swatch" style="background-color: #4b5563;" data-image="https://placehold.co/600x600/374151/FFF?text=Legging+Performance+Cinza" data-color="Cinza"></div>
-                                </div>
-                            </div>
-                            <div class="my-4">
-                                <span class="discount-badge">+1 peça = 20% OFF</span>
-                            </div>
-                            <p class="text-2xl font-extrabold text-white mt-auto pt-4">R$ 189,90</p>
-                            <a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20na%20Legging%20Performance%20Fit,%20Cor:%20Preta" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a>
-                        </div>
-                    </div>
+                    <div class="product-card rounded-xl overflow-hidden flex flex-col"><img src="https://placehold.co/600x600/374151/FFF?text=Legging+Performance+Preta" class="w-full h-72 object-cover product-image"><div class="p-5 flex flex-col flex-grow"><p class="text-sm font-medium text-green-300">Vértice Performance</p><h3 class="text-xl font-bold text-white mt-1 product-name">Legging Performance Fit</h3><div class="mt-3"><p class="text-xs text-gray-400 mb-2">Cores:</p><div class="flex space-x-2 color-selector"><div class="color-swatch active" style="background-color: #000000;" data-image="https://placehold.co/600x600/374151/FFF?text=Legging+Performance+Preta" data-color="Preta"></div><div class="color-swatch" style="background-color: #4b5563;" data-image="https://placehold.co/600x600/374151/FFF?text=Legging+Performance+Cinza" data-color="Cinza"></div></div></div><div class="my-4"><span class="discount-badge">+1 peça = 20% OFF</span></div><p class="text-2xl font-extrabold text-white mt-auto pt-4">R$ 189,90</p><a href="https://wa.me/5521979842856?text=Olá!%20Tenho%20interesse%20na%20Legging%20Performance%20Fit,%20Cor:%20Preta" target="_blank" class="buy-button w-full mt-5 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"><i data-lucide="shopping-cart" class="mr-2 h-5 w-5"></i>Comprar</a></div></div>
                 </div>
             </div>
         </div>
@@ -323,6 +259,8 @@
             const headerLinks = document.querySelectorAll('.header-link');
             const mainTabContents = document.querySelectorAll('.main-tab-content');
             const logo = document.getElementById('home-logo');
+            const subTabs = document.querySelectorAll('.sub-tab');
+            const brandContents = document.querySelectorAll('.brand-content');
 
             // --- FUNÇÕES DE CONTROLE DE VISIBILIDADE ---
             function showCatalog() {
@@ -346,24 +284,45 @@
                 });
             }
 
+            // --- FUNÇÃO PARA ATIVAR SUB-ABAS (MARCAS) ---
+            function activateBrandTab(brandId) {
+                subTabs.forEach(subTab => {
+                    subTab.classList.toggle('active', subTab.dataset.brand === brandId);
+                });
+                brandContents.forEach(content => {
+                    content.style.display = content.id === `${brandId}-content` ? 'grid' : 'none';
+                });
+            }
+
             // --- EVENTOS DE CLIQUE ---
             logo.addEventListener('click', (e) => { e.preventDefault(); showHomePage(); });
-            exploreButton.addEventListener('click', (e) => { e.preventDefault(); activateTab('tenis'); });
+            exploreButton.addEventListener('click', (e) => { e.preventDefault(); activateTab('tenis'); activateBrandTab('nike');});
             categoryCards.forEach(card => {
                 card.addEventListener('click', (e) => {
                     e.preventDefault();
                     const tabId = card.getAttribute('href').substring(1);
                     activateTab(tabId);
+                    if (tabId === 'tenis') {
+                       activateBrandTab('nike');
+                    }
                 });
             });
             mainTabs.forEach(tab => {
-                tab.addEventListener('click', (e) => { e.preventDefault(); activateTab(tab.dataset.tab); });
+                tab.addEventListener('click', (e) => { e.preventDefault(); activateTab(tab.dataset.tab); if(tab.dataset.tab === 'tenis'){activateBrandTab('nike');} });
             });
             headerLinks.forEach(link => {
                 link.addEventListener('click', (e) => {
                     e.preventDefault();
                     const tabId = link.getAttribute('href').substring(1);
                     activateTab(tabId);
+                    if (tabId === 'tenis') {
+                       activateBrandTab('nike');
+                    }
+                });
+            });
+            subTabs.forEach(subTab => {
+                subTab.addEventListener('click', function() {
+                    activateBrandTab(this.dataset.brand);
                 });
             });
 
