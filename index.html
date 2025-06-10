@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop Imports - Catálogo de Tênis</title>
+    
+    <!-- Tailwind CSS para estilização rápida e moderna -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts para uma tipografia elegante -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons para ícones (versão correta para HTML/JS) -->
+    <script src="https://unpkg.com/lucide-icons@latest"></script>
+
+    <style>
+        /* Aplicando a fonte Poppins como padrão */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Estilo para a aba ativa */
+        .tab-active {
+            border-bottom-color: #10B981; /* Verde esmeralda */
+            color: #10B981;
+        }
+        /* Efeito de sombra e escala nos cards de produto */
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- CABEÇALHO -->
+    <header class="bg-white shadow-sm py-4">
+        <div class="container mx-auto text-center px-4">
+            <h1 class="text-4xl font-bold text-gray-900">Drop Imports</h1>
+            <p class="text-md text-gray-500 mt-1">Seu próximo tênis está aqui.</p>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="container mx-auto p-4 md:p-8">
+        
+        <!-- NAVEGAÇÃO POR ABAS -->
+        <div class="mb-8 border-b border-gray-200">
+            <nav class="flex justify-center -mb-px space-x-6" id="tabs">
+                <!-- O JavaScript vai adicionar a classe 'tab-active' aqui -->
+                <a href="#" data-tab="nike" class="tab tab-active whitespace-nowrap py-4 px-1 border-b-2 font-medium text-lg">Nike</a>
+                <a href="#" data-tab="adidas" class="tab whitespace-nowrap py-4 px-1 border-b-2 font-medium text-lg text-gray-500 hover:text-gray-700 hover:border-gray-300">Adidas</a>
+                <a href="#" data-tab="puma" class="tab whitespace-nowrap py-4 px-1 border-b-2 font-medium text-lg text-gray-500 hover:text-gray-700 hover:border-gray-300">Puma</a>
+            </nav>
+        </div>
+
+        <!-- SEÇÃO DE PRODUTOS -->
+        <div id="product-content">
+            
+            <!-- ABA NIKE (Visível por padrão) -->
+            <div id="nike" class="tab-content">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    
+                    <!-- Produto 1 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md product-card">
+                        <img src="https://placehold.co/400x400/EFEFEF/333333?text=Nike+Air+Force+1" alt="Tênis Nike Air Force 1" class="w-full h-64 object-cover">
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold mb-2">Nike Air Force 1 '07</h3>
+                            <p class="text-gray-600 mb-3 text-sm">Tamanhos: 38 ao 43</p>
+                            <p class="text-2xl font-bold text-gray-900 mb-4">R$ 499,90</p>
+                            <a href="https://wa.me/5521999999999?text=Olá!%20Tenho%20interesse%20no%20Nike%20Air%20Force%201%20'07" target="_blank" class="w-full flex items-center justify-center bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-lg transition-colors">
+                                <i data-lucide="whatsapp" class="mr-2"></i>
+                                Comprar no WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Produto 2 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md product-card">
+                        <img src="https://placehold.co/400x400/EFEFEF/333333?text=Nike+Dunk+Low" alt="Tênis Nike Dunk Low" class="w-full h-64 object-cover">
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold mb-2">Nike Dunk Low "Panda"</h3>
+                            <p class="text-gray-600 mb-3 text-sm">Tamanhos: 39, 40, 42</p>
+                            <p class="text-2xl font-bold text-gray-900 mb-4">R$ 749,90</p>
+                            <a href="https://wa.me/5521999999999?text=Olá!%20Tenho%20interesse%20no%20Nike%20Dunk%20Low%20Panda" target="_blank" class="w-full flex items-center justify-center bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-lg transition-colors">
+                                <i data-lucide="whatsapp" class="mr-2"></i>
+                                Comprar no WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Adicione mais produtos Nike aqui -->
+                </div>
+            </div>
+
+            <!-- ABA ADIDAS (Oculta por padrão) -->
+            <div id="adidas" class="tab-content hidden">
+                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    <!-- Produto 3 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md product-card">
+                        <img src="https://placehold.co/400x400/EFEFEF/333333?text=Adidas+Forum" alt="Tênis Adidas Forum Low" class="w-full h-64 object-cover">
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold mb-2">Adidas Forum Low</h3>
+                            <p class="text-gray-600 mb-3 text-sm">Tamanhos: 39 ao 44</p>
+                            <p class="text-2xl font-bold text-gray-900 mb-4">R$ 549,90</p>
+                            <a href="https://wa.me/5521999999999?text=Olá!%20Tenho%20interesse%20no%20Adidas%20Forum%20Low" target="_blank" class="w-full flex items-center justify-center bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-lg transition-colors">
+                                <i data-lucide="whatsapp" class="mr-2"></i>
+                                Comprar no WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                     <!-- Adicione mais produtos Adidas aqui -->
+                 </div>
+            </div>
+
+            <!-- ABA PUMA (Oculta por padrão) -->
+            <div id="puma" class="tab-content hidden">
+                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    <!-- Produto 4 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md product-card">
+                        <img src="https://placehold.co/400x400/EFEFEF/333333?text=Puma+Suede" alt="Tênis Puma Suede Classic" class="w-full h-64 object-cover">
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold mb-2">Puma Suede Classic XXI</h3>
+                            <p class="text-gray-600 mb-3 text-sm">Tamanhos: 40, 41</p>
+                            <p class="text-2xl font-bold text-gray-900 mb-4">R$ 449,90</p>
+                            <a href="https://wa.me/5521999999999?text=Olá!%20Tenho%20interesse%20no%20Puma%20Suede%20Classic" target="_blank" class="w-full flex items-center justify-center bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-lg transition-colors">
+                                <i data-lucide="whatsapp" class="mr-2"></i>
+                                Comprar no WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                     <!-- Adicione mais produtos Puma aqui -->
+                 </div>
+            </div>
+            
+        </div>
+    </main>
+    
+    <!-- RODAPÉ -->
+    <footer class="bg-white mt-12 py-6 border-t">
+        <div class="container mx-auto text-center text-gray-500">
+            <p>&copy; 2024 Drop Imports. Todos os direitos reservados.</p>
+            <p class="text-sm mt-1">Feito com ❤️ para facilitar suas compras.</p>
+        </div>
+    </footer>
+
+
+    <script>
+        // --- SCRIPT PARA FUNCIONALIDADE DAS ABAS ---
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tab');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    
+                    const targetId = this.dataset.tab;
+                    
+                    // Atualiza a aparência das abas
+                    tabs.forEach(t => {
+                        t.classList.remove('tab-active');
+                        t.classList.add('text-gray-500', 'hover:text-gray-700', 'hover:border-gray-300');
+                    });
+                    this.classList.add('tab-active');
+                    this.classList.remove('text-gray-500', 'hover:text-gray-700', 'hover:border-gray-300');
+
+                    // Mostra o conteúdo da aba correta
+                    tabContents.forEach(content => {
+                        if (content.id === targetId) {
+                            content.classList.remove('hidden');
+                        } else {
+                            content.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+
+            // --- INICIALIZA OS ÍCONES ---
+            lucide.createIcons();
+        });
+
+        // --- COMO PERSONALIZAR ---
+        // 1. NÚMERO DE WHATSAPP:
+        //    Procure por "5521999999999" e substitua pelo seu número com código do país (55) e DDD.
+        //    Exemplo: https://wa.me/55SEUNUMERO
+        
+        // 2. PRODUTOS:
+        //    - Para adicionar um novo produto, copie e cole um dos blocos de "Produto".
+        //    - IMAGEM: Troque o link da `src` na tag `<img>`. Recomendo usar imagens quadradas.
+        //    - NOME, TAMANHOS, PREÇO: Altere o texto dentro das tags `<h3>` e `<p>`.
+        //    - MENSAGEM WHATSAPP: Altere o texto no link `<a>` para corresponder ao produto. Lembre-se que espaços são representados por `%20`.
+        //      Exemplo: "...?text=Olá!%20Tenho%20interesse%20no%20SEU%20PRODUTO"
+    </script>
+</body>
+</html>
